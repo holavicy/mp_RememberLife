@@ -62,5 +62,16 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  onGetUserInfo: function(e){
+    console.log(e);
+    if (e.detail.userInfo) {
+      this.setData({
+        avatarUrl: e.detail.userInfo.avatarUrl,
+        nickName: e.detail.userInfo.nickName
+      })
+      // app.globalData.userInfo = e.detail.userInfo;
+    }
   }
 })
