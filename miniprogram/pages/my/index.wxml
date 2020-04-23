@@ -3,7 +3,9 @@
   <view class="user-info"></view>
   <view class="login">
         <button class="get-info" open-type="getUserInfo" hover-class="none" 
-            bindgetuserinfo="onGetUserInfo">立即登录</button>
+        style="background-image:url(../../images/login_in.png)"
+        plain="true"
+            bindgetuserinfo="onGetUserInfo"></button>
   </view>
   <view class="menus"></view>
 </view>

@@ -1,1 +1,11 @@
 /* miniprogram/pages/my/index.wxss */
+.my .get-info{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  box-sizing: border-box;
+  /* background: #222222; */
+  background: url('cloud://dev-orjiw.6465-dev-orjiw-1259263152/local/login_in.png') no-repeat center;
+  background-size: cover;
+  border: 0;
+}
