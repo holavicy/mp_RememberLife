@@ -1,11 +1,43 @@
 /* miniprogram/pages/my/index.wxss */
+.my{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
 .my .get-info{
-  width: 50rpx;
-  height: 50rpx;
-  border-radius: 50%;
+  width: 60rpx;
+  height: 60rpx;
   box-sizing: border-box;
-  /* background: #222222; */
-  background: url('cloud://dev-orjiw.6465-dev-orjiw-1259263152/local/login_in.png') no-repeat center;
-  background-size: cover;
+  background-size: 60rpx 60rpx;
+  background-repeat: no-repeat;
+  background-position: center;
   border: 0;
+  margin-bottom: 20rpx;
+}
+
+.mp_slogon{
+  font-size: 30rpx;
+  float: left;
+  margin-top: 100rpx;
+}
+
+.mp_slogon .item{
+  min-height: 100rpx;
+  line-height: 100rpx;
+  float: left;
+  clear: both;
+}
+
+.rule-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rule-wrapper .icon{
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 10rpx;
 }

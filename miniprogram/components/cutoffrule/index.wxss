@@ -1,0 +1,6 @@
+/* components/cutoffrule/index.wxss */
+.cut-off-rule{
+  width: 100%;
+  height: 2rpx;
+  background-image: linear-gradient(to right, rgb(26, 29, 236) , rgb(164, 192, 104));
+}

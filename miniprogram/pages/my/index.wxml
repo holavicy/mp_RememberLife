@@ -1,11 +1,36 @@
 <!--miniprogram/pages/my/index.wxml-->
 <view class="my">
+  <view class="mp_slogon clearfix">
+    <view class="item">有些回忆不能只是回忆</view>
+    <view class="item">我们应该把她变成一个个<text class="theme">故事</text></view>
+    <view class="item"><text class="theme">分享</text>给这个世界</view>
+    <view class="item">让他人<text class="theme">倾听</text>，也让自己倾诉</view>
+    
+  </view>
+<cut-off-rule class="cut-off-rule" style="width:90%"></cut-off-rule>
+  
   <view class="user-info"></view>
   <view class="login">
-        <button class="get-info" open-type="getUserInfo" hover-class="none" 
-        style="background-image:url(../../images/login_in.png)"
-        plain="true"
+    <button class="get-info" wx:if="{{readRule}}"
+            open-type="getUserInfo" 
+            hover-class="none" 
+            style="background-image:url('https://6465-dev-orjiw-1259263152.tcb.qcloud.la/local/login%20(3).png?sign=a999c2e0ecd1a4f001ebe15e8bc4c6a0&t=1587710090')"
+            plain="true"
             bindgetuserinfo="onGetUserInfo"></button>
+    <button class="get-info" wx:else
+            hover-class="none" 
+            style="background-image:url('https://6465-dev-orjiw-1259263152.tcb.qcloud.la/local/login%20(4).png?sign=820f20408c90f7c1f2dc2c219ce554ff&t=1587710998')"
+            plain="true"></button>
+    <view class="rule-wrapper">
+      <view class="icon-wrapper" bindtap="readRule">
+        <image src="../../images/select_1.png" class="icon" wx:if="{{readRule}}"></image>
+        <image src="../../images/un_select.png" class="icon" wx:else></image>
+      </view>
+
+      <text class="light-info">阅读并同意</text>
+      <navigator class="link" hover-class="none" url="/rules/pages/serviceRule/index">《用户服务协议》</navigator>
+    </view>
+    
   </view>
   <view class="menus"></view>
 </view>

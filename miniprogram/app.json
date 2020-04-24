@@ -12,22 +12,33 @@
     "enablePullDownRefresh": true
   },
   "tabBar": {
-    "color":"#e6e6e6",
-    "selectedColor":"#ffffff",
-    "backgroundColor":"#9370db",
-    "borderStyle":"white",
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "首页",
-      "iconPath":"/images/cat_un.png",
-      "selectedIconPath":"/images/cat.png"
-    }, {
-      "pagePath": "pages/my/index",
-      "text": "我的",
-      "iconPath":"/images/cherry_un.png",
-      "selectedIconPath":"/images/cherry.png"
-    }]
+    "color": "#e6e6e6",
+    "selectedColor": "#ffffff",
+    "backgroundColor": "#9370db",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/cat_un.png",
+        "selectedIconPath": "/images/cat.png"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "text": "我的",
+        "iconPath": "/images/cherry_un.png",
+        "selectedIconPath": "/images/cherry.png"
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json",
-  "style": "v2"
+  "style": "v2",
+  "subpackages": [
+    {
+      "root": "rules",
+      "pages": [
+        "pages/serviceRule/index"
+      ]
+    }
+  ]
 }

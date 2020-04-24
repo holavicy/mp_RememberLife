@@ -1,11 +1,11 @@
-// miniprogram/pages/my/index.js
+// miniprogram/rules/pages/serviceRule/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    readRule:false
+
   },
 
   /**
@@ -62,22 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  onGetUserInfo: function(e){
-    console.log(e);
-    if (e.detail.userInfo) {
-      this.setData({
-        avatarUrl: e.detail.userInfo.avatarUrl,
-        nickName: e.detail.userInfo.nickName
-      })
-      // app.globalData.userInfo = e.detail.userInfo;
-    }
-  },
-
-  readRule: function(){
-    this.setData({
-      readRule:!this.data.readRule
-    })
   }
 })
