@@ -1,11 +1,14 @@
 // miniprogram/pages/my/index.js
+var app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    readRule:false
+    readRule:false,
+    userInfo:null,
+    login:-1
   },
 
   /**
@@ -26,58 +29,54 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    app.initUserInfo().then(res => {
+      if(res.login){
+        this.setData({
+          userInfo: app.globalData.userInfo,
+          login:1
+        })
+      } else {
+        this.setData({
+          login:0
+        })
+      }
+    });
 
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  },
-
-  onGetUserInfo: function(e){
+  //登录
+  onLoginIn: function(e){
     console.log(e);
     if (e.detail.userInfo) {
+      wx.cloud.callFunction({
+        name:'addCustomer'
+      })
       this.setData({
         avatarUrl: e.detail.userInfo.avatarUrl,
         nickName: e.detail.userInfo.nickName
       })
-      // app.globalData.userInfo = e.detail.userInfo;
+      app.globalData.userInfo = e.detail.userInfo;
+      this.addCustomer();
     }
   },
 
+  //用户点击标记是否已经阅读用户服务协议
   readRule: function(){
     this.setData({
       readRule:!this.data.readRule
+    })
+  },
+
+  //用户注册进数据库
+  addCustomer: function(){
+    wx.cloud.callFunction({
+      name:'addCustomer',
+      success:(res) => {
+        console.log(res);
+        if(res.result.code == 0){
+          app.globalData.openid = res.result.openid;
+        }
+      }
     })
   }
 })

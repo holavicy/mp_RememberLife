@@ -47,6 +47,13 @@
 					"id": -1,
 					"name": "我的",
 					"pathName": "pages/my/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "用户服务协议",
+					"pathName": "rules/pages/serviceRule/index",
 					"scene": null
 				}
 			]

@@ -1,5 +1,6 @@
 <!--miniprogram/pages/my/index.wxml-->
 <view class="my">
+  <view class="user-info" wx:if="{{login === 1}}"></view>
   <view class="mp_slogon clearfix">
     <view class="item">有些回忆不能只是回忆</view>
     <view class="item">我们应该把她变成一个个<text class="theme">故事</text></view>
@@ -9,14 +10,14 @@
   </view>
 <cut-off-rule class="cut-off-rule" style="width:90%"></cut-off-rule>
   
-  <view class="user-info"></view>
-  <view class="login">
+  
+  <view class="login" wx:if="{{login === 0}}">
     <button class="get-info" wx:if="{{readRule}}"
             open-type="getUserInfo" 
             hover-class="none" 
             style="background-image:url('https://6465-dev-orjiw-1259263152.tcb.qcloud.la/local/login%20(3).png?sign=a999c2e0ecd1a4f001ebe15e8bc4c6a0&t=1587710090')"
             plain="true"
-            bindgetuserinfo="onGetUserInfo"></button>
+            bindgetuserinfo="onLoginIn"></button>
     <button class="get-info" wx:else
             hover-class="none" 
             style="background-image:url('https://6465-dev-orjiw-1259263152.tcb.qcloud.la/local/login%20(4).png?sign=820f20408c90f7c1f2dc2c219ce554ff&t=1587710998')"

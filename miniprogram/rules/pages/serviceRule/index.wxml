@@ -1,2 +1,28 @@
 <!--miniprogram/rules/pages/serviceRule/index.wxml-->
-<text>miniprogram/rules/pages/serviceRule/index.wxml</text>
+<view class="rule-login" catchtouchmove="true">
+  <scroll-view scroll-y="true">
+
+    <view class="rule-title">用户须知</view>
+
+    <view class="rule-content">
+      <view class="title">关于我们</view>
+      <view class="content">RememberLife（以下简称“RL”），是一个专注为用户提供记录生活便捷功能的平台。包括恋爱纪念日，旅游记录，个人目标记录等。</view>
+
+      <view class="title">平台介绍</view>
+      <view class="content">RL致力于为用户提供记录生活的便捷功能，比如恋爱纪念日，旅游记录，个人目标记录等，是一个可以记录个人成长的便捷小程序。</view>
+
+      <view class="title">使用用户</view>
+      <view class="content">RL开放给所有用户，只要你想要记录生活的点点滴滴，就使用她吧，她会像一个小助理一样，记录你的生活。</view>
+
+      <view class="title">如有问题，请联系我们</view>
+      <view class="content">
+        <view>陈经理</view>
+        <view>电话：188-8817-8681</view>
+        <view>邮箱：819953059@qq.com</view>
+      </view>
+    </view>
+  </scroll-view>
+
+
+</view>
+
