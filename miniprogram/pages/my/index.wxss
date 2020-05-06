@@ -1,7 +1,7 @@
 /* miniprogram/pages/my/index.wxss */
 .my{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
   height: 100%;
@@ -17,10 +17,24 @@
   margin-bottom: 20rpx;
 }
 
+.my .user-info{
+  width: 90%;
+  display:  flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.my .user-info .image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  border: 2rpx solid #e5e5e5;
+  margin-right: 30rpx;
+}
+
 .mp_slogon{
   font-size: 30rpx;
   float: left;
-  margin-top: 100rpx;
 }
 
 .mp_slogon .item{
@@ -40,4 +54,21 @@
   width: 36rpx;
   height: 36rpx;
   margin-right: 10rpx;
+}
+
+.my .menus{
+  width: 90%;
+}
+
+.my .menus .menu-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid  #E5E5E5;
+  height: 100rpx;
+}
+
+.my .menus .menu-item image{
+  width: 20rpx;
+  height: 40rpx;
 }

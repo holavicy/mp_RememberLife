@@ -1,0 +1,19 @@
+<!--miniprogram/pages/specialDays/index.wxml-->
+<view class="special-days">
+  <view class="calendar">
+    <view class="top"></view>
+    <view class="week-day">
+      <view class="day-title">日</view>
+      <view class="day-title">一</view>
+      <view class="day-title">二</view>
+      <view class="day-title">三</view>
+      <view class="day-title">四</view>
+      <view class="day-title">五</view>
+      <view class="day-title">六</view>
+    </view>
+    <view class="days">
+      <view class="day" wx:for="{{calendarArr}}" wx:key="index">{{item.day}}</view>
+    </view>
+  </view>
+  <view class="item"></view>
+</view>

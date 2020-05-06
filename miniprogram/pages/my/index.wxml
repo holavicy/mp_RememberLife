@@ -1,16 +1,18 @@
 <!--miniprogram/pages/my/index.wxml-->
 <view class="my">
-  <view class="user-info" wx:if="{{login === 1}}"></view>
+  
+  <view class="user-info" wx:if="{{login === 1}}">
+    <image class="image" src="{{userInfo.avatarUrl}}"></image>
+    <view class="nick-name">你好，{{userInfo.nickName}}</view>
+  </view>
+  <cut-off-rule class="cut-off-rule" style="width:90%;height:2rpx"></cut-off-rule>
   <view class="mp_slogon clearfix">
     <view class="item">有些回忆不能只是回忆</view>
     <view class="item">我们应该把她变成一个个<text class="theme">故事</text></view>
     <view class="item"><text class="theme">分享</text>给这个世界</view>
     <view class="item">让他人<text class="theme">倾听</text>，也让自己倾诉</view>
-    
   </view>
-<cut-off-rule class="cut-off-rule" style="width:90%"></cut-off-rule>
-  
-  
+  <cut-off-rule class="cut-off-rule" style="width:90%"></cut-off-rule>
   <view class="login" wx:if="{{login === 0}}">
     <button class="get-info" wx:if="{{readRule}}"
             open-type="getUserInfo" 
@@ -33,5 +35,10 @@
     </view>
     
   </view>
-  <view class="menus"></view>
+  <view class="menus" wx:if="{{login==1}}">
+  <navigator hover-class="none" url="/pages/specialDays/index" class="menu-item">
+    <text>specialDays</text>
+    <image src="../../images/more.png"></image>
+  </navigator>
+  </view>
 </view>

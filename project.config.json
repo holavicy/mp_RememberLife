@@ -54,6 +54,13 @@
 					"id": -1,
 					"name": "用户服务协议",
 					"pathName": "rules/pages/serviceRule/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "specialDays",
+					"pathName": "pages/specialDays/index",
 					"scene": null
 				}
 			]
